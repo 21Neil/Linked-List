@@ -1,17 +1,17 @@
-import createNode from './createNode.js';
+import Node from './Node.js';
 
-function createLinkedList() {
+function LinkedList() {
   let head = null;
   let tail = null;
 
   const append = value => {
     if (head === null) {
-      head = createNode(value);
+      head = Node(value);
       tail = head;
       return;
     }
     if (head !== null) {
-      tail.nextNode = createNode(value);
+      tail.nextNode = Node(value);
       tail = tail.nextNode;
       return;
     }
@@ -19,12 +19,12 @@ function createLinkedList() {
 
   const prepend = value => {
     if (head === null) {
-      head = createNode(value);
+      head = Node(value);
       tail = head;
       return;
     }
     if (head !== null) {
-      const newNode = createNode(value);
+      const newNode = Node(value);
       newNode.nextNode = head;
       head = newNode;
       return;
@@ -105,7 +105,7 @@ function createLinkedList() {
 
   const insertAt = (value, index) => {
     let oldNode = at(index);
-    let newNode = createNode(value);
+    let newNode = Node(value);
     let prevNode = at(index - 1);
     prevNode.nextNode = newNode;
     newNode.nextNode = oldNode;
@@ -133,4 +133,4 @@ function createLinkedList() {
   };
 }
 
-export default createLinkedList();
+export default LinkedList();

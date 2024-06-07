@@ -1,28 +1,22 @@
-import createLinkedList from './createLinkedList.js';
+import LinkedList from './LinkedList.js';
 
-console.log(
-  createLinkedList.contains('test'),
-  createLinkedList.contains('test3')
-);
-console.log(createLinkedList.find('test'), createLinkedList.find('test3'));
-createLinkedList.append('test');
-createLinkedList.append('test2');
-createLinkedList.append('test3');
-console.log(createLinkedList.getHead());
-createLinkedList.prepend('pre test');
-console.log(createLinkedList.getHead());
-console.log(createLinkedList.getTail());
-console.log(createLinkedList.getSize());
-console.log(createLinkedList.at(2));
-createLinkedList.pop();
-console.log(createLinkedList.getTail());
-console.log(
-  createLinkedList.contains('test'),
-  createLinkedList.contains('test3')
-);
-console.log(createLinkedList.find('test'), createLinkedList.find('test3'));
-console.log(createLinkedList.toString());
-createLinkedList.insertAt('test insert', 1);
-console.log(createLinkedList.toString());
-createLinkedList.removeAt(2);
-console.log(createLinkedList.toString());
+console.log(LinkedList.contains('test'), LinkedList.contains('test3'));
+console.log(LinkedList.find('test'), LinkedList.find('test3'));
+LinkedList.append('test');
+LinkedList.append('test2');
+LinkedList.append('test3');
+console.log(LinkedList.getHead());
+LinkedList.prepend('pre test');
+console.log(LinkedList.getHead());
+console.log(LinkedList.getTail());
+console.log(LinkedList.getSize());
+console.log(LinkedList.at(2));
+LinkedList.pop();
+console.log(LinkedList.getTail());
+console.log(LinkedList.contains('test'), LinkedList.contains('test3'));
+console.log(LinkedList.find('test'), LinkedList.find('test3'));
+console.log(LinkedList.toString());
+LinkedList.insertAt('test insert', 1);
+console.log(LinkedList.toString());
+LinkedList.removeAt(2);
+console.log(LinkedList.toString());
